@@ -116,6 +116,9 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 - **Network protocol development** with kernel-level access for unrestricted research capabilities
 - **Open networking education** with full source availability
 
+## 📚 Guides and Tutorials
+- [**Serial Console Setup Guide**](docs/serial-console-access.md)
+
 ## 📦 Getting Hardware
 
 Ready to experience open networking? We make it simple to get started.
