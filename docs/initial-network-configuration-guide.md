@@ -16,7 +16,7 @@ The Tactical 1000 provides three types of network interfaces:
 - _eth28_: Dedicated out-of-band management port
 
 **Console Port:**
-- USB-C: For initial configuration via serial console (see our [Serial Console Guide](docs/serial-console-access.md))
+- USB-C: For initial configuration via serial console (see our [Serial Console Guide](serial-console-access.md))
 
 Let's see how these appear on your system. The Tactical 1000's interfaces follow a simple naming convention that makes them easy to identify and manage:
 
