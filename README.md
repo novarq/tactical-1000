@@ -119,6 +119,7 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 ## 📚 Guides and Tutorials
 - [**Serial Console Setup Guide**](docs/serial-console-access.md)
 - [**Initial Network Configuration Guide**](docs/initial-network-configuration-guide.md)
+- [**Linux-Powered VLAN Segmentation**](docs/linux-powered-vlan-segmentation.md)
 
 ## 📦 Getting Hardware
 
