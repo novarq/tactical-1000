@@ -46,6 +46,9 @@ The _Tactical 1000_ is Novarq's first switch, combining the performance of enter
 - Hardware-accelerated routing delivers wire-speed performance without software bottlenecks
 - IPv4/IPv6 unicast and multicast forwarding with reverse path forwarding
 
+**Configuration management and telemetry**
+- NETCONF/YANG (Netopeer2 and sysrepo) based support for datastore configuration management and telemetry
+
 **Quality of Service**
 - Intelligent traffic prioritization ensures critical applications get the bandwidth they need
 - 8 priority queues per port with strict priority and DWRR scheduling
@@ -120,6 +123,7 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 - [**Serial Console Setup Guide**](docs/serial-console-access.md)
 - [**Initial Network Configuration Guide**](docs/initial-network-configuration-guide.md)
 - [**Linux-Powered VLAN Segmentation**](docs/linux-powered-vlan-segmentation.md)
+- [**NETCONF based Network Configuration Guide**](docs/netconf-configuration-guide.md)
 
 ## 📦 Getting Hardware
 
