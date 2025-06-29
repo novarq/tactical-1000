@@ -6,9 +6,9 @@ The Novarq Tactical 1000 switch provides a serial console interface for initial 
 
 ## Physical Setup
 
-Connect your serial cable between your computer and the USB-C console port on the front panel of your switch.
+Connect your cable between your computer and the USB-C console port on the front panel of your switch.
 
-Before proceeding, ensure the switch is powered on. The serial console will display output from the moment power is applied, including the bootloader and entire boot process.
+Before proceeding, ensure the switch is powered on. Once configured, the serial console will display output from the moment power is applied, including the bootloader and entire boot process.
 
 ## Software Setup
 
@@ -23,13 +23,15 @@ Below are some common options:
 
 ### Method 1: Using C-kermit
 
-```bash
-# Launch C-kermit and configure connection
-kermit
-```
+Rather than manual configuration for each session, we establish a standardized, reusable configuration that ensures consistent connectivity.
 
+#### Create Configuration File
 ```bash
-# Configure serial parameters
+vi novarq_kermit
+```
+#### Configuration Content
+```
+# Novarq Tactical 1000 switch serial configuration
 set line /dev/ttyACM0
 set speed 115200
 set carrier-watch off
@@ -38,36 +40,36 @@ set handshake none
 set prefixing all
 set streaming off
 set parity none
-```
 
-```bash
-# Establish connection
+# Auto-connect when script is loaded
 connect
 ```
-
+#### Launch Console
+```bash
+kermit novarq_kermit
+```
 To disconnect from the session, use `Ctrl+\` followed by `C` to return to the kermit prompt.
 
-### Method 2: Using minicom 
+#### Method 2: Using minicom 
 
 ```bash
 # Configure minicom
 minicom -s
 
-# Set serial port settings in the configuration menu:
-# - Serial Device: /dev/ttyACM0
-# - Baud rate: 115200
-# - Data bits: 8
-# - Stop bits: 1
-# - Parity: None
-# - Flow control: None
-# - Hardware flow control: No
-# - Software flow control: No
-# Save configuration and exit setup
+Serial Device: /dev/ttyACM0
+Baud Rate: 115200
+Data Bits: 8
+Stop Bits: 1
+Parity: None
+Hardware Flow Control: No
+Software Flow Control: No
+
+Save as: novarq_minicom (creates reusable profile)
 ```
 
 ```bash
 # Connect to the switch
-minicom
+minicom novarq_minicom
 ```
 
 To exit minicom, press `Ctrl+A` followed by `X`.
