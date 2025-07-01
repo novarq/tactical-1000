@@ -16,7 +16,7 @@ Let's see how to configure your system by using NETCONF. The guide will follow p
 To start using NETCONF on your system, there are some steps that need to be taken in order to start up all of the NETCONF related software.
 
 ```sh
-root@noble-lan969x:/# netopeer2-server -d -v 3
+netopeer2-server -d -v 3
 ```
 
 _Expected output:_
@@ -39,7 +39,7 @@ Next, start the sysrepo plugins that match what you want to manage through NETCO
 sysrepo-plugin-interfaces from the [sysrepo-plugins](https://github.com/telekom/sysrepo-plugins) plugin collection.
 
 ```sh
-root@noble-lan969x:~/src/sysrepo-plugins# ./build/plugins/ietf-interfaces-plugin/ietf-interfaces-plugin
+~/src/sysrepo-plugins/build/plugins/ietf-interfaces-plugin/ietf-interfaces-plugin
 ```
 
 _Expected output:_
@@ -88,14 +88,19 @@ _Expected output:_
 [INF] ietf-interfaces-plugin: Created plugin subscriptions
 ```
 
-Lastly, on another system, start `netopeer2-cli` and connect to the `netopeer2-server` running on the Tactical1000 switch.
+Lastly, on another system, start `netopeer2-cli` and connect to the `netopeer2-server` running on the Tactical 1000 switch.
 ```sh
-root@fedfc68a4ca1:/# netopeer2-cli
+netopeer2-cli
+```
+_Expected output:_
+```
 load_config: No saved configuration.
+```
+Connect to the appropriate IP address, for example:
+```sh
 > connect 192.168.7.2
 ```
-
-_Expected output:_:
+_Expected output:_
 ```
 Keyboard-Interactive Authentication
 Please enter your authentication token
@@ -108,9 +113,8 @@ First off, we can issue a `get-config` command to retrieve the current state of 
 ```sh
 > get-config --source running --filter-xpath /interfaces
 ```
-
 _Expected output:_
-```
+```XML
 DATA
 <data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
@@ -608,7 +612,7 @@ To change the configuration data through NETCONF, we will issue an `edit-config`
 
 First create a `mtu.xml` file in the same directory where you started `netopeer2-cli`.
 The contents of the file should look like this:
-```
+```XML
 <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
   <interface>
     <name>lo</name>
@@ -624,11 +628,9 @@ Next, run the following command in the `netopeer2-cli` session:
 ```sh
 > edit-config --target running --config=mtu.xml
 ```
-
 _Expected output:_
 ```
 OK
->
 ```
 
 This command should change the loopback (lo) interface MTU.
@@ -643,7 +645,7 @@ First retrieve the configuration data from NETCONF again.
 ```
 
 _Expected Output_:
-```
+```XML
 ...
     <interface>
       <name>lo</name>
@@ -675,7 +677,7 @@ _Expected Output_:
 ...
 ```
 
-This confirms your that the Tactical1000 interfaces can be configured using NETCONF, enabling automated network configuration of the device.
+This confirms your that the Tactical 1000 interfaces can be configured using NETCONF, enabling automated network configuration of the device.
 
 ## Configuration Persistence
 
@@ -684,7 +686,6 @@ To do that, run the following command:
 ```sh
 > copy-config --target startup --source running
 ```
-
 _Expected output:_
 ```
 OK
@@ -696,7 +697,7 @@ Then issue a `get-config` command for the startup datastore:
 ```
 
 _Expected output:_
-```
+```XML
 DATA
 <data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
@@ -1188,8 +1189,8 @@ DATA
 
 ## Compliance
 
-Since the NETCONF subsystem on the Tactical 1000 is based on existing open source projects like Netopeer2 and sysrepo,
-it offers support for all of the RFCs and features that the open-source dependencies have.
+Since the NETCONF subsystem on the Tactical 1000 is based on existing open source projects like Netopeer2 and sysrepo, it offers support for all of the RFCs and features that the open-source dependencies have.
+
 Most importantly this includes:
 
 ### YANG
@@ -1212,8 +1213,7 @@ Most importantly this includes:
 
 ### YANG implementation coverage
 
-Due to leveraging the [sysrepo-plugins](https://github.com/telekom/sysrepo-plugins) plugin collection, the Tactical 1000
-has support for configuration and management of different subsystems out of the box.
+Due to leveraging the [sysrepo-plugins](https://github.com/telekom/sysrepo-plugins) plugin collection, the Tactical 1000 has support for configuration and management of different subsystems out of the box.
 
 This includes support for the following YANG models:
 * ietf-hardware
@@ -1230,4 +1230,4 @@ This includes support for the following YANG models:
 
 ## What's Next?
 
-This showcases basic network configuration through NETCONF, leveraging existing open-source projects to achieve greater flexibility and ease of use. The integration of open-source NETCONF software gives Tactical 1000 the foundation to build a simple and reliable network that is ready to scale with complete transparency and control and which can be easily automated using state of the art solutions.
+This showcases basic network configuration through NETCONF, leveraging existing open-source projects to achieve greater flexibility and ease of use. The integration of open source NETCONF software gives Tactical 1000 the foundation to build a simple and reliable network that is ready to scale with complete transparency and control and which can be easily automated using state of the art solutions.
