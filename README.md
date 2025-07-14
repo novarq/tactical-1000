@@ -25,7 +25,7 @@ The _Tactical 1000_ is Novarq's first switch, combining the performance of enter
 - **Form Factor:** Standard 1U rack-mountable design
 - **CPU**: 64-bit ARM Cortex-A53, single-core @ 1 GHz
 - **DRAM**: 2GB DDR4
-- **Storage**: 8GB eMMC NAND + 32MB QSPI NOR Flash
+- **Storage**: 16GB eMMC NAND + 256MB SPI NAND + 32MB QSPI NOR
 - **PoE Support**: 🚧 Coming soon
 
 ## ⚙️ Features
@@ -118,6 +118,11 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 ### Development & Research
 - **Network protocol development** with kernel-level access for unrestricted research capabilities
 - **Open networking education** with full source availability
+
+## 🐧 Operating systems
+- [**Buildroot**](https://github.com/novarq/buildroot-external-novarq)
+- [**Debian**](https://github.com/novarq/debootstrap)
+- [**Ubuntu**](https://github.com/novarq/debootstrap)
 
 ## 📚 Guides and Tutorials
 - [**Serial Console Setup Guide**](docs/serial-console-access.md)
