@@ -129,6 +129,7 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 - [**Initial Network Configuration Guide**](docs/initial-network-configuration-guide.md)
 - [**Linux-Powered VLAN Segmentation**](docs/linux-powered-vlan-segmentation.md)
 - [**NETCONF based Network Configuration Guide**](docs/netconf-configuration-guide.md)
+- [**Docker Setup Guide**](docs/docker-setup-guide.md)
 
 ## 📦 Getting Hardware
 
