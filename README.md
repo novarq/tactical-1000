@@ -25,7 +25,7 @@ The _Tactical 1000_ is Novarq's first switch, combining the performance of enter
 - **Form Factor:** Standard 1U rack-mountable design
 - **CPU**: 64-bit ARM Cortex-A53, single-core @ 1 GHz
 - **DRAM**: 2GB DDR4
-- **Storage**: 16GB eMMC NAND + 256MB SPI NAND + 32MB QSPI NOR
+- **Storage**: 16GB eMMC NAND + 32MB QSPI NOR
 - **PoE Support**: 🚧 Coming soon
 
 ## ⚙️ Features
