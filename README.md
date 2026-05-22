@@ -123,7 +123,7 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 - [**Buildroot**](https://github.com/novarq/buildroot-external-novarq)
 - [**Debian**](https://github.com/novarq/debootstrap)
 - [**Ubuntu**](https://github.com/novarq/debootstrap)
-- OpenWrt 🚧
+- [**OpenWrt**](https://github.com/novarq/tactical-1000/blob/main/docs/openwrt-setup-guide.md)
 
 ## 📚 Guides and Tutorials
 - [**Serial Console Setup Guide**](docs/serial-console-access.md)
