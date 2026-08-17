@@ -13,7 +13,7 @@ The _Tactical 1000_ is Novarq's first switch, combining the performance of enter
 
 ## 📋 Technical Specifications
 
-- **Platform**: Microchip [LAN9696TSN-V/3KW](https://www.microchip.com/en-us/product/lan9696)
+- **Platform**: Microchip [LAN9696-V/3KW](https://www.microchip.com/en-us/product/lan9696)
 - **Switching Capacity**: 66 Gbit/s non-blocking
 - **Data Connectivity**
   - 24x RJ-45 10/100/1000BASE-T ports
