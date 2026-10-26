@@ -134,6 +134,8 @@ The Tactical 1000 breaks free from proprietary limitations with a pure Linux fou
 - [**Docker Setup Guide**](docs/docker-setup-guide.md)
 - [**Selective Routing & Wireguard**](docs/selective-routing-and-wireguard.md)
 - [**JTAG Debugging Setup Guide**](docs/jtag-debugging-guide.md)
+- [**BIRD Installation and Configuration Guide**](docs/bird-setup-guide.md)
+- [**FRRouting Installation and Configuration Guide**](docs/frr-setup-guide.md)
 
 ## 📦 Getting Hardware
 
